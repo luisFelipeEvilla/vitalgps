@@ -6,6 +6,7 @@ import Header from "./partials/header";
 
 // Screens
 import HomeScreen from "./pages/home";
+import DetailsScreen from "./pages/details";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <div className="content">
             <Routes>
               <Route path="/" exact={true} element={<HomeScreen/>}></Route>
+              <Route path="/center/:nit" element={<DetailsScreen/>}></Route>
             </Routes>
           </div>
         </main>
