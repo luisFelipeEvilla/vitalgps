@@ -1,0 +1,23 @@
+.card-container {
+    margin: 15px 0;
+}
+
+.container {
+    padding-top: 10px;
+}
+
+.card img:hover {
+    cursor: pointer;
+}
+.card:hover {
+    transform: scale(1.02); 
+}
+
+.card-title {
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 1; /* number of lines to show */
+           line-clamp: 1; 
+   -webkit-box-orient: vertical;
+} 
