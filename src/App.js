@@ -8,6 +8,7 @@ import Header from "./partials/header";
 import HomeScreen from "./pages/home";
 import DetailsScreen from "./pages/details";
 import AboutUsScreen from "./pages/about";
+import ContactScreen from "./pages/contact";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Routes>
               <Route path="/" exact={true} element={<HomeScreen/>}></Route>
               <Route path="/about" exact={true} element={<AboutUsScreen/>}></Route>
+              <Route path="/contact" exact={true} element={<ContactScreen/>}></Route>
               <Route path="/center/:nit" element={<DetailsScreen/>}></Route>
             </Routes>
           </div>
