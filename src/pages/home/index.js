@@ -53,8 +53,7 @@ function HomeScreen(props) {
     }
 
     return (
-        <div className="container detail-container">
-
+        <div className="container centers-container">
             <div class="row height d-flex justify-content-center align-centers-center">
                 <div class="col-md-6">
                     <div class="form">

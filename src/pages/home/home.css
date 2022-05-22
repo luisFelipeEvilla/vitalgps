@@ -8,8 +8,16 @@
     height: 100%;
 }
 
-.form{
+.img-slider-container {
+    
+}
 
+.img-slider-container {
+    margin-bottom: 50px;
+}
+
+
+.form{
     position: relative;
 }
 

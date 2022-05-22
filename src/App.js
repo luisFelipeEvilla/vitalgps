@@ -10,6 +10,7 @@ import DetailsScreen from "./pages/details";
 import AboutUsScreen from "./pages/about";
 import ContactScreen from "./pages/contact";
 import LoginScreen from "./pages/login/login";
+import SignupScreen from "./pages/signup";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route path="/about" exact={true} element={<AboutUsScreen/>}></Route>
               <Route path="/contact" exact={true} element={<ContactScreen/>}></Route>
               <Route path="/login" exact={true} element={<LoginScreen/>}></Route>
+              <Route path="/signup" exact={true} element={<SignupScreen/>}></Route>
               <Route path="/center/:nit" element={<DetailsScreen/>}></Route>
             </Routes>
           </div>
