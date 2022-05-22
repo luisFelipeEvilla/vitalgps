@@ -10,7 +10,7 @@ function DetailsScreen(props) {
 
     const product = products.find(product => product.nits_nit == nit)
     return (
-        <div className="container">
+        <div className="container details-container">
             <div className="row">
                 <div className="col-md-5">
                     <div className="project-info-box mt-0">

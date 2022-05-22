@@ -35,7 +35,7 @@ function HomeScreen(props) {
     const index = 0;
 
     return (
-        <div className="container">
+        <div className="container detail-container">
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 card-container">
                 {
                     currentItems.map(product =>

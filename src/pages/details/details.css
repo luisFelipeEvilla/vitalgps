@@ -1,5 +1,7 @@
-body{
-  background:#f5f5f5;
+.details-container {
+  display: flex;
+  align-items: center;
+  height: 90vh;
 }
 
 .no-gutter .project {
