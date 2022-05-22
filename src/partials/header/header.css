@@ -1,18 +1,19 @@
 #header {
-    background-color: #1D3557 !important;
+    background-color: #0A0903 !important;
     position: fixed;
     min-width: 100%;
     min-height: 70px;
     z-index: 1;
 }
 
-#header .nav-link {
-    font-size: 1.2em;
-    color: white !important;
+.brand-logo {
+    max-height: 2.5rem;
 }
 
-.navbar-brand {
-    color: white !important;
+#header .nav-link {
+    font-size: 1.1em;
+    color: #fffcff;
+    border-bottom: transparent solid 1px;
 }
 
 #navbarNav {
@@ -20,14 +21,22 @@
     padding: 0 10px;
 }
 
-.nav-item:hover {
-    transform: scale(1.2);
-    text-decoration: underline;
+.nav-item {
+    margin: 5px;
 }
 
-.navbar-toggler{
-    color: white
+.nav-item:hover {
+    border-bottom: #F1FAEE solid 1px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 9px 20px 9px rgba(14,26,42,0.27); 
+    box-shadow: 0px 10px 13px -7px #000000, 0px 9px 20px 9px rgba(14,26,42,0.27);
 }
-.navbar-toggler-icon{
-    color: white
+
+.nav-item:hover .nav-link {}
+
+.navbar-toggler {
+    color: #fffcff
+}
+
+.navbar-toggler-icon {
+    color: #fffcff
 }
