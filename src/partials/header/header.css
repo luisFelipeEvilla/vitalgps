@@ -1,3 +1,33 @@
 #header {
-    background-color: white !important;
+    background-color: #1D3557 !important;
+    position: fixed;
+    min-width: 100%;
+    min-height: 70px;
+    z-index: 1;
+}
+
+#header .nav-link {
+    font-size: 1.2em;
+    color: white !important;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+#navbarNav {
+    justify-content: flex-end;
+    padding: 0 10px;
+}
+
+.nav-item:hover {
+    transform: scale(1.2);
+    text-decoration: underline;
+}
+
+.navbar-toggler{
+    color: white
+}
+.navbar-toggler-icon{
+    color: white
 }

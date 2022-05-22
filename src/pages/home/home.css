@@ -4,6 +4,8 @@
 
 .container {
     padding-top: 10px;
+    align-items: center;
+    height: 100%;
 }
 
 .card img:hover {
@@ -21,3 +23,8 @@
            line-clamp: 1; 
    -webkit-box-orient: vertical;
 } 
+
+.pagination-container {
+    display: flex;
+    justify-content: flex-end;
+}
