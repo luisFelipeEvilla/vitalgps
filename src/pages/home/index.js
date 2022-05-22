@@ -1,55 +1,85 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import products from '../../centers.json'
 import ReactPaginate from 'react-paginate';
+
+import centers from '../../centers.json' // dataset completo
+
+import logo1 from '../../assets/iconos/centros/1.png'
+import logo2 from '../../assets/iconos/centros/2.png'
+import logo3 from '../../assets/iconos/centros/3.png'
+import logo4 from '../../assets/iconos/centros/4.png'
+import logo5 from '../../assets/iconos/centros/5.png'
 
 import './home.css'
 
 function HomeScreen(props) {
-    const [currentItems, setCurrentItems] = useState([]);
+    const [filtreredCenters, setFiltreredCenters] = useState(centers)
+    const [currentcenters, setCurrentcenters] = useState([]);
     const [pageCount, setPageCount] = useState(0);
+    const [search, setSearch] = useState('');
 
-    const [itemOffset, setItemOffset] = useState(0);
-    const itemsPerPage = 9;
+    const iconos = [ logo1, logo2, logo3, logo4, logo5]
+
+    const [centerOffset, setcenterOffset] = useState(0);
+    const centersPerPage = 9;
+
+    const navigate = useNavigate();
 
     useEffect(() => {
-        const endOffset = itemOffset + itemsPerPage;
-        setCurrentItems(products.slice(itemOffset, endOffset));
-        setPageCount(Math.ceil(products.length / itemsPerPage));
-    }, [itemOffset, itemsPerPage])
+        const endOffset = centerOffset + centersPerPage;
+        setCurrentcenters(filtreredCenters.slice(centerOffset, endOffset));
+        setPageCount(Math.ceil(filtreredCenters.length / centersPerPage));
+    }, [centerOffset, centersPerPage, filtreredCenters])
+
+    useEffect(() => {
+        const patron = search.toLowerCase()
+        setFiltreredCenters(centers.filter(center => center.razon_social.toLowerCase().includes(patron)))
+    }, [search])
 
     const handlePageClick = (event) => {
-        const newOffset = (event.selected * itemsPerPage) % products.length;
+        const newOffset = (event.selected * centersPerPage) % centers.length;
         console.log(
             `User requested page number ${event.selected}, which is offset ${newOffset}`
         );
-        setItemOffset(newOffset);
+        setcenterOffset(newOffset);
     };
-
-    const navigate = useNavigate();
 
     const handleClick = (nit) => {
         navigate(`/center/${nit}`)
     }
 
-    const index = 0;
+    const handleSearch = (e) => {
+        setSearch(e.target.value)
+    }
 
     return (
         <div className="container detail-container">
+
+            <div class="row height d-flex justify-content-center align-centers-center">
+                <div class="col-md-6">
+                    <div class="form">
+                        <i class="bi bi-search"></i>
+                        <input onChange={handleSearch} type="text" class="form-control form-input" placeholder="Busca un centro medico por nombre" />
+                    </div>
+                </div>
+            </div>
+
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 card-container">
                 {
-                    currentItems.map(product =>
-                        <div key={product.nits_nit} className="col">
+                    currentcenters.map(center =>
+                        <div key={center.nits_nit} className="col">
                             <div className="card shadow-sm">
-                                <img onClick={(e) => handleClick(product.nits_nit)}
-                                    src="https://lirp.cdn-website.com/a979b4f7/dms3rep/multi/opt/gente-caminando-sentada-edificio-hospital-exterior-cristal-clinica-ciudad-ilustracion-vector-plano-ayuda-medica-emergencia-arquitectura-concepto-salud_74855-10130-640w.jpg" className="card-img-top" alt="..." />
+                                <img onClick={(e) => handleClick(center.nits_nit)}
+                                    src={iconos[center.icono]} className="card-img-top" alt="..." />
                                 <div className="card-body">
-                                    <h5 className="card-title">{product.razon_social}</h5>
-                                    <p className="card-subtitle mb-2 text-muted">Dirección: {product.direccion}</p>
-                                    <p className="card-subtitle mb-2 text-muted">Municipio: {product.muni_nombre}</p>
-                                    <p className="card-subtitle mb-2 text-muted">Contacto: {product.telefono}</p>
-                                    <p className="card-subtitle mb-2 text-muted">Correo: {product.email}</p>
-                                    <Link className="btn btn-primary" to={'/center/' + product.nits_nit}>Ver más</Link>
+                                    <h5 className="card-title">{center.razon_social}</h5>
+                                    <p className="card-subtitle mb-2 text-muted">Dirección: {center.direccion}</p>
+                                    <p className="card-subtitle mb-2 text-muted">Municipio: {center.muni_nombre}</p>
+                                    <p className="card-subtitle mb-2 text-muted">Contacto: {center.telefono}</p>
+                                    <p className="card-subtitle mb-2 text-muted">Correo: {center.email}</p>
+                                    <div className='btn-center'>
+                                        <Link className="btn btn-primary" to={'/center/' + center.nits_nit}>Ver más</Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>)

@@ -1,7 +1,12 @@
 .details-container {
   display: flex;
   align-items: center;
-  height: 90vh;
+}
+
+.details-image{
+  padding-top: 18px;
+  width: 642px;
+  height: 413px;
 }
 
 .no-gutter .project {
@@ -90,4 +95,8 @@ p {
 }
 b, strong {
     font-weight: 700 !important;
+}
+
+@media (max-width: 600px) {
+  
 }

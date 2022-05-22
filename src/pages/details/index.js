@@ -5,15 +5,23 @@ import products from '../../centers.json'
 
 import './details.css'
 
+import logo1 from '../../assets/iconos/centros/1.png'
+import logo2 from '../../assets/iconos/centros/2.png'
+import logo3 from '../../assets/iconos/centros/3.png'
+import logo4 from '../../assets/iconos/centros/4.png'
+import logo5 from '../../assets/iconos/centros/5.png'
+
 function DetailsScreen(props) {
     const { nit } = useParams()
+
+    const iconos = [logo1, logo2, logo3, logo4, logo5]
 
     const product = products.find(product => product.nits_nit == nit)
     return (
         <div className="container details-container">
             <div className="row">
                 <div className="col-md-5">
-                    <div className="project-info-box mt-0">
+                    <div className="project-info-box ">
                         <h5>{product.razon_social}</h5>
                         <p className="mb-0"></p>
                     </div>
@@ -35,7 +43,7 @@ function DetailsScreen(props) {
                 </div>
 
                 <div className="col-md-7">
-                    <img src="https://lirp.cdn-website.com/a979b4f7/dms3rep/multi/opt/gente-caminando-sentada-edificio-hospital-exterior-cristal-clinica-ciudad-ilustracion-vector-plano-ayuda-medica-emergencia-arquitectura-concepto-salud_74855-10130-640w.jpg" alt="center" className="rounded" />
+                    <img src={iconos[product.icono]} alt="center" className="rounded details-image" />
                     <div className="project-info-box">
                         <p><b>Tipo de Institución:</b> {product.naju_nombre}</p>
                         <p><b>Caracter</b> {product.caracter}</p>
