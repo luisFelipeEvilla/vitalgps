@@ -15,7 +15,7 @@ function DetailsScreen(props) {
 
     const iconos = [logo1, logo2, logo3, logo4, logo5]
 
-    const product = products.find(product => product.nits_nit === nit)
+    const product = products.find(product => product.nits_nit == nit)
     return (
         <div className="container details-container">
             <div className="row">
