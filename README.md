@@ -14,9 +14,9 @@ The purpose of this app is to make a H2C app, with information of all healthcare
 Dataset: https://www.datos.gov.co/Salud-y-Protecci-n-Social/Prestadores-de-Servicios-de-Salud-del-Distrito-de-/ykfz-ifui
 
 ## Objectives
-## General: 
+### General: 
 Design and implement a digital platform that provides information about the nearest health centers.
-## Specific:
+### Specific:
 -Develop a web app with new technologies.
 -Deploy the solution of our web app for the users who require it.
 -Carry out a version control through the GitHub platform.
