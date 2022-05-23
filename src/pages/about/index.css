@@ -2,7 +2,7 @@ a {
     text-decoration: none;
 }
 .about-container {
-    padding: 5rem 1rem
+    padding: 3rem 1rem
 }
 
 .description-container {
@@ -32,3 +32,12 @@ a {
     transform: scale(1.01);
 }
 
+@media (max-width: 430px) {
+    .github-link {
+        margin-top: 20px;
+    }
+
+    .github-link a {
+        font-size: 1.2em;
+    }
+}

@@ -7,7 +7,7 @@ function SignupScreen(props) {
     return (
         <div className="container login-container">
             <div className="form-container">
-                <h2 className="row form-title">Ingresar</h2>
+                <h2 className="row form-title">Registrarse</h2>
                 <div className="row">
                     <div className="form-group">
                         <label for="name" className="form-label">Nombre Completo</label>

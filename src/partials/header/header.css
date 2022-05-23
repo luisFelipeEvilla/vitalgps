@@ -1,6 +1,5 @@
 #header {
     background-color: #0A0903 !important;
-    position: fixed;
     min-width: 100%;
     min-height: 70px;
     z-index: 1;
@@ -8,6 +7,7 @@
 
 .brand-logo {
     max-height: 2.5rem;
+    max-width: 8rem;
 }
 
 #header .nav-link {
@@ -30,8 +30,6 @@
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 9px 20px 9px rgba(14,26,42,0.27); 
     box-shadow: 0px 10px 13px -7px #000000, 0px 9px 20px 9px rgba(14,26,42,0.27);
 }
-
-.nav-item:hover .nav-link {}
 
 .navbar-toggler {
     color: #fffcff
