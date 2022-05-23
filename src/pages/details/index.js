@@ -14,7 +14,7 @@ function DetailsScreen(props) {
     const { nit } = useParams()
 
     const iconos = [logo1, logo2, logo3, logo4, logo5]
-
+    // eslint-disable-next-line
     const product = products.find(product => product.nits_nit == nit)
     return (
         <div className="container details-container">
