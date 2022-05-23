@@ -16,6 +16,13 @@ function Login(props) {
                     </div>
                 </div>
 
+                <div className="row">
+                    <div className="form-group">
+                        <label for="password" className="form-label">Contraseña</label>
+                        <input className="form-control" id="password" type="password"></input>
+                    </div>
+                </div>
+
                 <div className="submit-container">
                     <button className="btn btn-success" type="submit">Enviar</button>
                     <div className="signup-link-container">
