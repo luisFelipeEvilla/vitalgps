@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams } from 'react-router-dom'
-import { WhatsappShareButton } from 'react-share'
 import products from '../../centers.json'
 
 import './details.css'
@@ -16,7 +15,7 @@ function DetailsScreen(props) {
 
     const iconos = [logo1, logo2, logo3, logo4, logo5]
 
-    const product = products.find(product => product.nits_nit == nit)
+    const product = products.find(product => product.nits_nit === nit)
     return (
         <div className="container details-container">
             <div className="row">
