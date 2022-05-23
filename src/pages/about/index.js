@@ -19,10 +19,9 @@ function About(props) {
                         son confiables
                     </p>
 
-                    <img></img>
                 </div>
                 <div className="about-image-container col-md-6">
-                    <img src="http://papuanews.org/wp-content/uploads/2016/12/Badan-Peduli-Kesehatan-dan-Unit-Pertolongan-Cepat-02-800x445.png" />
+                    <img src="http://papuanews.org/wp-content/uploads/2016/12/Badan-Peduli-Kesehatan-dan-Unit-Pertolongan-Cepat-02-800x445.png" alt="Logo"/>
                 </div>
             </div>
 
